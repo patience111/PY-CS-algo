@@ -1,2 +1,2 @@
 # PY-CS-algo
-some personal stuff
+Trivial? Nontrivial!
