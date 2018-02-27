@@ -8,5 +8,15 @@ class Restaurant():
         print('The restaurant is a '+self.cuisine_type.title()+' flavor.')
     def open_restuarant(self):
         print('The restaurant is open now!')
+    def read_number(self):
+        print('The saved number is '+str(self.number_saved))
+    def set_number_saved(self, number):
+        self.number_saved=number
+    def increment_number_served(self,n):
+        self.number_saved+=n
+        
 my_restaurant=Restaurant('Yun Hai Yao','Yun nan')
-print(my_restaurant.number_saved)
+my_restaurant.set_number_saved(23)
+my_restaurant.increment_number_served(100)
+my_restaurant.read_number()
+
