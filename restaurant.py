@@ -14,9 +14,17 @@ class Restaurant():
         self.number_saved=number
     def increment_number_served(self,n):
         self.number_saved+=n
-        
-my_restaurant=Restaurant('Yun Hai Yao','Yun nan')
-my_restaurant.set_number_saved(23)
-my_restaurant.increment_number_served(100)
-my_restaurant.read_number()
+class IceCreamStand(Restaurant):
+    def __init__(self,name,cuisine_type):
+        super().__init__(name,cuisine_type)
+        self.flavor=['apple','pear','peach','watermenlon']
+    def describe_flavor(self):
+        for i in self.flavor:
+            print(i)
 
+#my_restaurant=Restaurant('Yun Hai Yao','Yun nan')
+#my_restaurant.set_number_saved(23)
+#my_restaurant.increment_number_served(100)
+#my_restaurant.read_number()
+icecreamstand=IceCreamStand("Yao's",'Icecream')
+icecreamstand.describe_flavor()
