@@ -1,0 +1,27 @@
+import pygal
+from die import Die
+# create one D6 die and one D10 die
+die_1 = Die()
+die_2 = Die(10)
+# make same rolls,and store results in a list.
+results = []
+for roll_num in range(50000):
+    result = die_1.roll() + die_2.roll()
+    results.append(result)
+# analyze the results
+frequencies = []
+max_result = die_1.num_sides + die_2.num_sides
+for value in range(2, max_result + 1):
+    frequency = results.count(value)
+    frequencies.append(frequency)
+
+# print(frequencies)
+# print(len(frequencies))
+# visulize the results
+hist = pygal.Bar()
+hist.title = "Results of rolling a D6 and D10 500000 times."
+hist.x_labels = ['2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16']
+hist.xtitle = 'Results'
+hist.ytitle = "Frequency of Result"
+hist.add('D6+D10', frequencies)
+hist.render_to_file('dice_visual1.svg')
