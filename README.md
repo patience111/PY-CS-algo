@@ -6,4 +6,6 @@ Trivial? Nontrivial!
 * VisPy<br>http://vispy.org/index.html
 * GLUMPY<br>https://glumpy.github.io/
 * PyQtGraph<br>http://www.pyqtgraph.org/
-## Study resource for python<br>https://www.zhihu.com/question/24526559/answer/110041110
+## Study resource for python
+* https://www.zhihu.com/question/24526559/answer/110041110
+* https://zhuanlan.zhihu.com/p/21799170
